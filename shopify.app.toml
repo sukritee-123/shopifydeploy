@@ -1,0 +1,38 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "scripts_oia_full_stack"
+client_id = "8be4549e1145fcefd3cc2726a482f777"
+application_url = "https://happening-diverse-more-yrs.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products , write_script_tags, write_pixels, read_customer_events"
+use_legacy_install_flow = true
+
+[auth]
+redirect_urls = [
+  "https://happening-diverse-more-yrs.trycloudflare.com/auth/callback",
+  "https://happening-diverse-more-yrs.trycloudflare.com/auth/shopify/callback",
+  "https://happening-diverse-more-yrs.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+  [webhooks.privacy_compliance]
+  customer_deletion_url = "https://uninstallled.free.beeceptor.com"
+  customer_data_request_url = "https://uninstallled.free.beeceptor.com"
+  shop_deletion_url = "https://uninstallled.free.beeceptor.com"
+
+[app_proxy]
+url = "https://firstapppp.myshopify.com/apps/scripts_oia_full_stack"
+subpath = "store-pickup"
+prefix = "apps"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = false
+dev_store_url = "firstapppp.myshopify.com"
